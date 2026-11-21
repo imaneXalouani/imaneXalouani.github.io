@@ -10,11 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
-/* VOICE: confident, technical, a little magical: an AI engineer's night lab
-   IDEA: a live neural network you can touch; every project shown running, in its own window
-   PICTURE: interactive particle network behind everything + real app screenshots in tilting browser frames
-   COLOUR and TYPE: midnight ink, rose + violet aurora, peach spark; Syne display, Instrument Serif italic accents, Inter body, JetBrains Mono for code
-   LAYOUT: full-screen hero with orbiting photo, count-up stats, alternating case-study rows, flow cards, bento skills, filling timeline, contact */
 :root{color-scheme:dark;--bg:#07060d;--ink:#f4eef8;--muted:#a99cb8;--dim:#6f6480;--line:rgba(255,255,255,.09);--glass:rgba(255,255,255,.035);
   --rose:#ff5c9e;--violet:#9b6bff;--peach:#ffb38a;--sky:#7cc8ff;--grad:linear-gradient(100deg,#ff5c9e,#c06bff 50%,#7cc8ff);
   --f-disp:'Syne',system-ui,sans-serif;--f-serif:'Instrument Serif',Georgia,serif;--f-body:'Inter',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,monospace}
@@ -291,7 +286,6 @@ body.en [data-fr]{display:none!important}
       <a class="btn" href="https://github.com/imaneXalouani"><svg><use href="#gh"/></svg>GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/imane-alouani-449518251"><svg><use href="#li"/></svg>LinkedIn</a>
     </div>
-    <div class="scroll-hint"><span class="mouse"></span><span data-fr>Bougez la souris, cliquez sur le fond</span><span data-en>Move your mouse, click the background</span></div>
   </div>
   <div class="orbit" aria-hidden="true">
     <div class="track t2"></div><div class="track"></div>
@@ -319,7 +313,6 @@ body.en [data-fr]{display:none!important}
   <div class="rv">
     <span class="eyebrow"><span data-fr>Projets sélectionnés</span><span data-en>Selected work</span></span>
     <h2><span data-fr>Des projets qui <em>tournent</em>, pas des notebooks</span><span data-en>Projects that <em>run</em>, not just notebooks</span></h2>
-    <p class="sub"><span data-fr>Les captures viennent des vraies applications. Cliquez dessus pour les agrandir.</span><span data-en>Screenshots come from the real apps. Click any of them to enlarge.</span></p>
   </div>
   <div class="filters rv" id="filters">
     <button class="on" data-f="all"><span data-fr>Tout</span><span data-en>All</span></button>
@@ -402,7 +395,7 @@ body.en [data-fr]{display:none!important}
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 Imane Alouani · Casablanca</span><span data-fr>Le réseau en fond réagit à votre souris.</span><span data-en>The network in the background reacts to your mouse.</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Imane Alouani · Casablanca</span><span>imanealouani93@gmail.com</span></div></footer>
 
 <dialog id="lb"><button aria-label="Fermer" id="lbx">×</button><img id="lbi" alt=""><p id="lbc"></p></dialog>
 
@@ -440,12 +433,12 @@ const CASES=[
   m:[],tags:['YOLOv8','OpenCV','Streamlit','Plotly'],links:[[GH+'imaneXalouani/warehouse-management-app',T('Code source','Source code')]],
   url:'carton-analyzer · demo',shots:[['warehouse-demo',T('Démo animée','Live demo')],['warehouse-dashboard',T('Tableau de bord','Dashboard')],['warehouse-stacks',T('Analyse des piles','Stack analysis')]]},
  {c:'ml data',y:2025,k:'Machine Learning · Streamlit',t:T("Prix des voitures d'occasion","Used-car price predictor"),st:T('au Maroc, en dirhams','for Morocco, in dirhams'),
-  d:T("Plus de 80&nbsp;000 annonces Avito.ma collectées et nettoyées, un modèle de régression et une appli Streamlit qui estime le prix. La capture montre une vraie prédiction : une Dacia Logan 2015 à Casablanca, estimée à 117&nbsp;587 MAD.","Over 80,000 Avito.ma listings collected and cleaned, a regression model and a Streamlit app that estimates the price. The screenshot shows a real prediction: a 2015 Dacia Logan in Casablanca, estimated at 117,587 MAD."),
+  d:T("Plus de 80&nbsp;000 annonces Avito.ma collectées et nettoyées, un modèle de régression et une appli Streamlit qui estime le prix.","Over 80,000 Avito.ma listings collected and cleaned, a regression model and a Streamlit app that estimates the price."),
   m:[['80k+',T('annonces','listings')],['R² 0,84',T('sur le test','on test')],['≈12,5k MAD','MAE']],
   tags:['Python','Pandas','scikit-learn','XGBoost','Streamlit'],links:[[GH+'imaneXalouani/moroccan-car-price-predictor',T('Code source','Source code')]],
   url:'localhost:8501 · car-price',shots:[['car-predict',T('Prédiction réelle','Real prediction')],['car-insights',T('Marché','Market insights')]]},
  {c:'data',y:2026,k:'Data Engineering',t:'ETL vs ELT',st:T('le dilemme de l\'architecte data','the data architect\'s dilemma'),
-  d:T("Deux pipelines sur le même CSV « sale » de 20&nbsp;000 commandes : ETL en Pandas vers SQLite, ELT en SQL dans DuckDB (raw → staging → mart, à la dbt). Le terminal rejoue une vraie exécution.","Two pipelines on the same messy 20,000-order CSV: ETL in Pandas into SQLite, ELT in SQL inside DuckDB (raw → staging → mart, dbt-style). The terminal replays a real run."),
+  d:T("Deux pipelines sur le même CSV « sale » de 20&nbsp;000 commandes : ETL en Pandas vers SQLite, ELT en SQL dans DuckDB (raw → staging → mart, à la dbt).","Two pipelines on the same messy 20,000-order CSV: ETL in Pandas into SQLite, ELT in SQL inside DuckDB (raw → staging → mart, dbt-style)."),
   role:T("<b>Mon rôle :</b> le pipeline ETL, le rapport académique et la présentation de soutenance.","<b>My part:</b> the ETL pipeline, the academic report and the defense presentation."),
   m:[['×7,8',T('ELT plus rapide sur cette exécution','faster ELT on this run')],['15 912',T('lignes identiques en sortie','matching output rows')]],
   tags:['DuckDB','SQL','Pandas','SQLite','dbt'],links:[[GH+'imaneXalouani/etl-vs-elt-data-engineering',T('Code source','Source code')]],
@@ -484,7 +477,7 @@ $('#cases').innerHTML=CASES.map((p,i)=>`<article class="case" data-c="${p.c}">
  </div>
  <div class="vis rv">
   <div class="frame"><div class="bar"><i></i><i></i><i></i><span>${p.url}</span></div>
-  ${p.term?`<div class="term" id="term"></div>`:`<div class="screen" data-i="${i}">${p.shots.map(([s,l,fit],j)=>`<img src="img/${s}.webp" alt="" class="${j?'':'on'}${fit?' fit':''}" ${j?'loading="lazy"':''} data-l="${encodeURIComponent(l)}">`).join('')}<span class="zoom">${T('Agrandir','Enlarge')} ⤢</span></div>`}
+  ${p.term?`<div class="term" id="term"></div>`:`<div class="screen" data-i="${i}">${p.shots.map(([s,l,fit],j)=>`<img src="img/${s}.webp" alt="" class="${j?'':'on'}${fit?' fit':''}" ${j?'loading="lazy"':''} data-l="${encodeURIComponent(l)}">`).join('')}<span class="zoom">⤢</span></div>`}
   </div>
   ${p.shots&&p.shots.length>1?`<div class="tabs">${p.shots.map(([s,l],j)=>`<button class="${j?'':'on'}" data-j="${j}">${l}</button>`).join('')}</div>`:''}
  </div>
@@ -494,7 +487,7 @@ $('#minis').innerHTML=MINIS.map(p=>`<article class="mini rv" data-c="${p.c}">
  <div class="kind"><span class="yr">${p.y}</span><span>·</span><span>${p.k}</span></div>
  <h3>${p.t}</h3>
  ${p.flow?`<div class="flow" style="--n:${p.flow.length};--T:${p.flow.length*.7}s">${p.flow.map((f,i)=>{const me=Array.isArray(f);return `${i?'<em>→</em>':''}<span style="--i:${i}" class="${me?'me':''}">${me?f[0]:f}</span>`}).join('')}</div>`:''}
- ${p.spark?`<div class="spark"><small>${T('illustration','illustration')}</small><svg viewBox="0 0 300 70" preserveAspectRatio="none"><path class="band" d="M200 30 C230 22 260 14 300 8 L300 42 C260 46 230 50 200 44Z"/><path class="ln" d="M0 52 C20 40 30 58 50 46 S80 30 100 40 S130 54 150 36 S180 26 200 37"/><path class="fc" d="M200 37 C230 34 260 26 300 24"/></svg></div>`:''}
+ ${p.spark?`<div class="spark"><svg viewBox="0 0 300 70" preserveAspectRatio="none"><path class="band" d="M200 30 C230 22 260 14 300 8 L300 42 C260 46 230 50 200 44Z"/><path class="ln" d="M0 52 C20 40 30 58 50 46 S80 30 100 40 S130 54 150 36 S180 26 200 37"/><path class="fc" d="M200 37 C230 34 260 26 300 24"/></svg></div>`:''}
  <p>${p.d}</p>
  ${p.note?`<p class="role" style="font-size:14px">${p.note}</p>`:''}
  <div class="tags">${p.tags.map(x=>`<span>${x}</span>`).join('')}</div>
